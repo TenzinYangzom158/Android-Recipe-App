@@ -1,9 +1,13 @@
 package gvs.com.recipeapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RatingBar;
@@ -16,6 +20,39 @@ import com.google.android.material.snackbar.Snackbar;
 public class FeedbackActivity extends AppCompatActivity {
 
     RatingBar rateStar;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenubar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.search:
+                search();
+                return true;
+            case R.id.help:
+                showHelp();
+                return true;
+            case R.id.setting:
+                setting();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void search() {
+    }
+    private void showHelp(){
+    }
+    private void setting(){
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

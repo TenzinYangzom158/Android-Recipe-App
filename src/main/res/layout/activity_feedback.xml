@@ -130,19 +130,21 @@
                 android:text="Would you recommend this app to your friend?"/>
 
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:layout_width="331dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="30dp">
+                android:layout_marginStart="30dp"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yes"/>
+                    android:text="Yes" />
+
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No"/>
+                    android:layout_marginStart="30dp"
+                    android:text="No" />
 
             </RadioGroup>
 

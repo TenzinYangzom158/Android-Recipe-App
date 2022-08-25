@@ -78,8 +78,10 @@
         android:id="@+id/spinner1"
         android:layout_width="123dp"
         android:layout_height="49dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="206dp"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="476dp"
         android:contentDescription="Type"
@@ -131,6 +133,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="71dp"
+        android:backgroundTint="@color/black"
         android:onClick="onClick"
         android:text="Register"
         android:textStyle="bold" />

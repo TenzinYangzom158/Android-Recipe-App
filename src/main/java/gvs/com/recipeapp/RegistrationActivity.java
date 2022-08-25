@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.snackbar.SnackbarContentLayout;
 
 public class RegistrationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -47,25 +48,24 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
         switchCompat = findViewById(R.id.switchNotification);
 
 
-        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
-                    textView.setText("Bluetooth is " + toggleButton.getTextOn());
-                }
-                else
-                {
-                    textView.setText("Bluetooth is " + toggleButton.getTextOff());
-                }
+        toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked)
+            {
+                textView.setText("Bluetooth is " + toggleButton.getTextOn());
+            }
+            else
+            {
+                textView.setText("Bluetooth is " + toggleButton.getTextOff());
             }
         });
+
 
         switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Snackbar.make(buttonView, "Notification checked "+isChecked, Snackbar.LENGTH_LONG)
                         .setAction("ACTION",null).show();
+
             }
         });
     }
@@ -94,7 +94,12 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
         dialog.setMessage("Thank you for registering.");
         dialog.setTitle("Registration Successful!");
         dialog.setPositiveButton("Close",
-                (dialog1, which) -> Toast.makeText(getApplicationContext(), "Registered Successful!", Toast.LENGTH_LONG).show());
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog1, int which) {
+                        Toast.makeText(RegistrationActivity.this.getApplicationContext(), "Registered Successful!", Toast.LENGTH_LONG).show();
+                    }
+                });
 //        dialog.setNegativeButton("cancel",
 //                (dialog12, which) -> Toast.makeText(getApplicationContext(), "cancel is clicked", Toast.LENGTH_LONG).show());
         AlertDialog alertDialog = dialog.create();

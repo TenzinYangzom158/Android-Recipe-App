@@ -17,19 +17,16 @@
             android:layout_width="301dp"
             android:layout_height="185dp"
             android:layout_marginTop="40dp"
-            android:src="@drawable/kimbap"/>
+            android:src="@drawable/kimbap" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/webviewFAB"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:src="@drawable/ic_youtube"
-            android:layout_height="wrap_content"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:src="@drawable/ic_youtube"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
-
-
-
 
 
     <TextView
@@ -106,30 +103,28 @@
     <Button
         android:id="@+id/cameraBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Camera"
-        android:onClick="Back"/>
+        android:layout_height="40dp"
+        android:onClick="Back"
+        android:backgroundTint="@color/black"
+        android:text="Camera" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/clickImage"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content" />-->
-
-
-
+    <!--    <ImageView-->
+    <!--        android:id="@+id/clickImage"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content" />-->
 
 
     <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/addFab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_gravity="end"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginBottom="600dp"-->
-<!--        android:src="@drawable/ic_add"-->
-<!--        app:fabSize="normal" />-->
+    <!--        android:id="@+id/addFab"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_gravity="end"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginBottom="600dp"-->
+    <!--        android:src="@drawable/ic_add"-->
+    <!--        app:fabSize="normal" />-->
 
 
 </LinearLayout>
